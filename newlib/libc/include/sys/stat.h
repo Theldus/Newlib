@@ -25,14 +25,14 @@ extern "C" {
 #else
 struct	stat 
 {
-  unsigned		st_dev;
-  unsigned short		st_ino;
-  int	st_mode;
-  int	st_nlink;
-  int		st_uid;
-  int		st_gid;
-  unsigned		st_rdev;
-  signed		st_size;
+  dev_t		st_dev;
+  ino_t		st_ino;
+  mode_t	st_mode;
+  nlink_t	st_nlink;
+  uid_t		st_uid;
+  gid_t		st_gid;
+  dev_t		st_rdev;
+  off_t		st_size;
 #if defined(__rtems__)
   struct timespec st_atim;
   struct timespec st_mtim;
@@ -46,11 +46,11 @@ struct	stat
   time_t	st_mtime;
   time_t	st_ctime;
 #else
-  signed	st_atime;
+  time_t	st_atime;
   long		st_spare1;
-  signed	st_mtime;
+  time_t	st_mtime;
   long		st_spare2;
-  signed	st_ctime;
+  time_t	st_ctime;
   long		st_spare3;
   long		st_blksize;
   long		st_blocks;
