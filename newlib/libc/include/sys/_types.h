@@ -13,18 +13,23 @@
 #include <sys/lock.h>
 
 #ifndef __off_t_defined
-typedef long _off_t;
+typedef signed _off_t;
 #endif
 
 #ifndef __dev_t_defined
-typedef short __dev_t;
+typedef unsigned __dev_t;
 #endif
 
 #ifndef __uid_t_defined
-typedef unsigned short __uid_t;
+typedef int __uid_t;
 #endif
+
+#ifndef __id_t_defined
+typedef int __id_t;
+#endif
+
 #ifndef __gid_t_defined
-typedef unsigned short __gid_t;
+typedef int __gid_t;
 #endif
 
 #ifndef __off64_t_defined

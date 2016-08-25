@@ -139,7 +139,7 @@ struct itimerspec {
 };
 
 #ifndef __daddr_t_defined
-typedef	long	daddr_t;
+typedef	unsigned	daddr_t;
 #define __daddr_t_defined
 #endif
 #ifndef __caddr_t_defined
@@ -185,6 +185,7 @@ typedef _off_t	off_t;
 typedef __dev_t dev_t;
 typedef __uid_t uid_t;
 typedef __gid_t gid_t;
+typedef __id_t  id_t;
 #endif
 
 #if defined(__XMK__)
@@ -214,12 +215,12 @@ typedef unsigned long mode_t;
 typedef unsigned short mode_t;
 #endif
 #else
-typedef unsigned int mode_t _ST_INT32;
+typedef signed mode_t _ST_INT32;
 #endif
 #endif /* ! __MS_types__ */
 #endif /*__CYGWIN__*/
 
-typedef unsigned short nlink_t;
+typedef int nlink_t;
 
 /* We don't define fd_set and friends if we are compiling POSIX
    source, or if we have included (or may include as indicated
