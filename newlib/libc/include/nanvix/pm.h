@@ -138,7 +138,7 @@
     	unsigned received;                 /**< Received signals.       */
     	void *kstack;                      /**< Kernel stack pointer.   */
     	void (*restorer)(void);            /**< Signal restorer.        */
-		sighandler_t handlers[23]; /**< Signal handlers.        */
+		sighandler_t handlers[NR_SIGNALS]; /**< Signal handlers.        */
 		unsigned irqlvl;                   /**< Current IRQ level.      */
     	struct fpu fss;                    /**< FPU Saved Status.       */
 		/**@}*/
@@ -158,7 +158,7 @@
 		/**@{*/
 		struct inode *pwd;             /**< Working directory.         */
 		struct inode *root;            /**< Root directory.            */
-		struct file *ofiles[20]; /**< Opened files.              */
+		struct file *ofiles[OPEN_MAX]; /**< Opened files.              */
 		int close;                     /**< Close on exec()?           */
 		mode_t umask;                  /**< User file's creation mask. */
 		dev_t tty;                     /**< Associated tty device.     */
@@ -180,7 +180,7 @@
     	pid_t pid;              /**< Process ID.              */
     	struct process *pgrp;   /**< Process group ID.        */
     	struct process *father; /**< Father process.          */
-		char name[14];    /**< Process name.            */
+		char name[NAME_MAX];    /**< Process name.            */
 		/**@}*/
 
     	/**
