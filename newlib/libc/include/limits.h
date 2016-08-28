@@ -137,10 +137,33 @@
 #define _POSIX2_RE_DUP_MAX              255
 #endif /* _POSIX2_RE_DUP_MAX  */
 
+/* Length of argument to the execve(). */
 #ifndef ARG_MAX
-#define ARG_MAX		4096
+#define ARG_MAX		2048
 #endif
 
+/**
+ * @brief Maximum number of bytes in a pathname.
+ */
 #ifndef PATH_MAX
-#define PATH_MAX	4096
+#define PATH_MAX	512
 #endif
+
+/* Nanvix definitions. */
+
+/* Number of functions that may be registered with atexit() */
+#define ATEXIT_MAX 32
+
+/* Default process priority. */
+#define NZERO 20
+
+/* Maximum number of links to a single file. */
+#define LINK_MAX 8
+
+/**
+ * @brief Maximum number of bytes in a filename.
+ */
+#define NAME_MAX 14
+
+/* Files that one process can have open simultaneously. */
+#define OPEN_MAX 20
