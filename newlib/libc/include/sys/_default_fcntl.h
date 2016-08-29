@@ -27,6 +27,11 @@ extern "C" {
 #define	O_ACCMODE	(O_RDONLY|O_WRONLY|O_RDWR)
 
 /*
+ * Returns file's access mode.
+ */
+#define ACCMODE(m) (m & O_ACCMODE)
+
+/*
  * Flag values for open(2) and fcntl(2)
  * The kernel adds 1 to the open modes to turn it into some
  * combination of FREAD and FWRITE.
