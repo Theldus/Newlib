@@ -14,10 +14,7 @@
 #  define NL_ARGMAX 32
 # endif
 
-/* if do not have #include_next support, then we
-   have to define the limits here. */
-# if !defined __GNUC__ || __GNUC__ < 2
-
+/* Use our limits definition instead of GCC. */
 #  ifndef _LIMITS_H
 #   define _LIMITS_H	1
 
@@ -83,10 +80,10 @@
 #     define __LONG_MAX__ 2147483647L
 #    endif /* __alpha__ || sparc64 */
 #   endif
+#   undef LONG_MAX
+#   define LONG_MAX 2147483647
 #   undef LONG_MIN
 #   define LONG_MIN (-LONG_MAX-1)
-#   undef LONG_MAX
-#   define LONG_MAX __LONG_MAX__
 
 /* Maximum value an `unsigned long int' can hold.  (Minimum is 0).  */
 #   undef ULONG_MAX
@@ -122,14 +119,8 @@
 #   endif
 
 #  endif /* _LIMITS_H  */
-# endif	 /* GCC 2.  */
 
 #endif	 /* !_LIBC_LIMITS_H_ */
-
-#if defined __GNUC__ && !defined _GCC_LIMITS_H_
-/* `_GCC_LIMITS_H_' is what GCC's file defines.  */
-# include_next <limits.h>
-#endif /* __GNUC__ && !_GCC_LIMITS_H_ */
 
 #ifndef _POSIX2_RE_DUP_MAX
 /* The maximum number of repeated occurrences of a regular expression
