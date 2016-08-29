@@ -11,8 +11,11 @@ extern "C" {
 #include <sys/reent.h>
 
 #ifndef _REENT_ONLY
+extern int errno;
+/*
 #define errno (*__errno())
 extern int *__errno _PARAMS ((void));
+*/
 #endif
 
 /* Please don't use these variables directly.
