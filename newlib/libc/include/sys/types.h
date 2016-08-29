@@ -16,6 +16,7 @@
  */
 
 #ifndef _SYS_TYPES_H
+#ifndef _ASM_FILE_
 
 #include <_ansi.h>
 
@@ -519,4 +520,5 @@ typedef struct {
 
 #undef __need_inttypes
 
+#endif  /* _ASM_FILE_   */
 #endif	/* _SYS_TYPES_H */

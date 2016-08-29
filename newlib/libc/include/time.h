@@ -6,6 +6,7 @@
 
 #ifndef _TIME_H_
 #define _TIME_H_
+#ifndef _ASM_FILE_
 
 #include "_ansi.h"
 #include <sys/reent.h>
@@ -287,5 +288,5 @@ int _EXFUN(clock_getenable_attr, (clockid_t clock_id, int *attr));
 }
 #endif
 
+#endif /* _ASM_FILE_ */
 #endif /* _TIME_H_ */
-

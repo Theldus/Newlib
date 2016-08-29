@@ -1,4 +1,5 @@
 #ifndef	_SYS_TIMES_H
+#ifndef _ASM_FILE_
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -28,4 +29,5 @@ clock_t _EXFUN(_times,(struct tms *));
 #ifdef __cplusplus
 }
 #endif
+#endif  /* _ASM_FILE_ */
 #endif	/* !_SYS_TIMES_H */

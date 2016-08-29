@@ -1,3 +1,4 @@
+#ifndef _ASM_FILE_
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -10,3 +11,4 @@ extern "C" {
 #ifdef __cplusplus
 }
 #endif
+#endif /* _ASM_FILE_ */
