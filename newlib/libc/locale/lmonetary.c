@@ -93,7 +93,9 @@ int
 __monetary_load_locale(const char *name , void *f_wctomb, const char *charset)
 {
 	int ret;
-
+	((void)f_wctomb);
+	((void)charset);
+	
 #ifdef __CYGWIN__
 	extern int __set_lc_monetary_from_win (const char *,
 					       const struct lc_monetary_T *,
