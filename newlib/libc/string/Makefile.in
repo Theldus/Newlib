@@ -72,11 +72,10 @@ LIBRARIES = $(noinst_LIBRARIES)
 ARFLAGS = cru
 lib_a_AR = $(AR) $(ARFLAGS)
 lib_a_LIBADD =
-am__objects_1 = lib_a-bcopy.$(OBJEXT) lib_a-bzero.$(OBJEXT) \
-	lib_a-index.$(OBJEXT) lib_a-memchr.$(OBJEXT) \
+am__objects_1 = lib_a-memchr.$(OBJEXT) \
 	lib_a-memcmp.$(OBJEXT) lib_a-memcpy.$(OBJEXT) \
 	lib_a-memmove.$(OBJEXT) lib_a-memset.$(OBJEXT) \
-	lib_a-rindex.$(OBJEXT) lib_a-strcasecmp.$(OBJEXT) \
+	lib_a-strcasecmp.$(OBJEXT) \
 	lib_a-strcat.$(OBJEXT) lib_a-strchr.$(OBJEXT) \
 	lib_a-strcmp.$(OBJEXT) lib_a-strcoll.$(OBJEXT) \
 	lib_a-strcpy.$(OBJEXT) lib_a-strcspn.$(OBJEXT) \
@@ -106,7 +105,7 @@ am__objects_1 = lib_a-bcopy.$(OBJEXT) lib_a-bzero.$(OBJEXT) \
 	lib_a-wmemchr.$(OBJEXT) lib_a-wmemcmp.$(OBJEXT) \
 	lib_a-wmemcpy.$(OBJEXT) lib_a-wmemmove.$(OBJEXT) \
 	lib_a-wmemset.$(OBJEXT) lib_a-xpg_strerror_r.$(OBJEXT)
-@ELIX_LEVEL_1_FALSE@am__objects_2 = lib_a-bcmp.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@am__objects_2 = \
 @ELIX_LEVEL_1_FALSE@	lib_a-memccpy.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@	lib_a-mempcpy.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@	lib_a-stpcpy.$(OBJEXT) \
@@ -325,15 +324,11 @@ top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = cygnus
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 GENERAL_SOURCES = \
-	bcopy.c \
-	bzero.c \
-	index.c \
 	memchr.c \
 	memcmp.c \
 	memcpy.c \
 	memmove.c \
 	memset.c \
-	rindex.c \
 	strcasecmp.c \
 	strcat.c \
 	strchr.c \
