@@ -24,7 +24,7 @@
 /*
  * Writes to a file.
  */
-int write(int fd, const void *buf, size_t n)
+ssize_t write(int fd, const void *buf, size_t n)
 {
 	int ret;
 	

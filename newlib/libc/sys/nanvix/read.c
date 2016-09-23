@@ -24,7 +24,7 @@
 /*
  * Reads from a file.
  */
-int read(int fd, void *buf, size_t n)
+ssize_t read(int fd, void *buf, size_t n)
 {
 	int ret;
 	
