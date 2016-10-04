@@ -39,6 +39,7 @@ QUICKREF
 
 	double nan(const char *unused)
 {
+	((void)unused);
 	double x;
 
 #if __GNUC_PREREQ (3, 3)

@@ -7,6 +7,7 @@
 
 	float nanf(const char *unused)
 {
+	((void)unused);
 	float x;
 
 #if __GNUC_PREREQ (3, 3)
